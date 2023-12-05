@@ -70,9 +70,9 @@ stats comb_sort(std::vector<int>& arr) {
     int size = arr.size();
     if (size < 2)
         return s;
-    int step = size;
+    int step = size-1;
     bool swaps = true;
-    while (step >= 1|| swaps ==true) {
+    while (step >= 1 || swaps ==true) {
         swaps = false;
         for (int i = 0; i < size-step; ++i) {
             ++s.comparison_count;
@@ -82,7 +82,10 @@ stats comb_sort(std::vector<int>& arr) {
                 swaps=true;
             }
         }
-        step = step - 1;
+        step = step-1;
+        if (step < 1 && swaps == true) {
+            step = 1;
+        }
 
     }return s;
 }
@@ -169,7 +172,7 @@ stats comb_sort(Iterator begin, Iterator end) {
     int size = end - begin;
     if (size < 2)
         return s;
-    int step = size;
+    int step = size-1;
     bool swaps = true;
     while (step >= 1 || swaps == true) {
         swaps = false;
@@ -182,6 +185,10 @@ stats comb_sort(Iterator begin, Iterator end) {
             }
         }
         step = step - 1;
+        if (step < 1 && swaps == true) {
+            step = 1;
+        }
+        
 
     }return s;
 }

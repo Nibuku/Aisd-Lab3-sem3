@@ -301,7 +301,7 @@ TEST(vectors, randomSize50000) {
 	cout << "size: " << 50000 << endl;
 	cout << "Average comparison quantity: " << sum_comparison / 100 << endl;
 	cout << "Average copy quantity: " << sum_copy / 100 << endl;
-}*/
+}
 
 TEST(vectors, randomSize100000) {
 	size_t sum_comparison = 0, sum_copy = 0;
@@ -314,5 +314,5 @@ TEST(vectors, randomSize100000) {
 	cout << "size: " << 100000 << endl;
 	cout << "Average comparison quantity: " << sum_comparison / 100 << endl;
 	cout << "Average copy quantity: " << sum_copy / 100 << endl;
-}
+}*/
 
